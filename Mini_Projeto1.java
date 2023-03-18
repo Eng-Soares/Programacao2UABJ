@@ -1,5 +1,5 @@
 import java.util.Scanner;
-public class Mini_Projeto {
+public class Mini_Projeto1 {
 public static void main(String[] args) {
         Scanner recebedor = new Scanner(System.in);
 
