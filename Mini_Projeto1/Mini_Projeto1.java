@@ -1,68 +1,47 @@
 package Mini_Projeto1;
-import java.util.Scanner;
 
+import java.util.Scanner;
 public class Mini_Projeto1 {
 public static void main(String[] args) {
-        Scanner recebedor = new Scanner(System.in);
 
-        Personagem person1 = new Personagem("Sr. Joãozinho", 100, 100, "Guerreiro");
-        Personagem person2 = new Personagem("Cobra", 100, 10, "Animal");
+    Scanner recebedor = new Scanner(System.in);
 
-        System.out.print("\nPor favor, digite seu nome: ");
-        String nomejogador = recebedor.nextLine();
+    //Introdução e contexto
+    System.out.println("\n\n------------------------------------------------------------------------------------------------------------------A HISTÓRIA DE JOÃOZIN------------------------------------------------------------------------------------------------------------------------------\n\n");
+    System.out.print("  A muito tempo atrás, Joãozin se viu em uma situação de agonia em sua vida. Triste e amargurado pela sua rotina monótona, teve um choque de realidade de uma hora para outra. Implorou aos Deuses uma luz que o orientasse, pois deveria mudar sua realidade, ir em busca da felicidade. Ao ouvirem suas preces, eles resolvem ajudar. Designam você para possuir o corpo de Joãozin e se passar por ele por algum tempo. A partir de agora suas decisões mudarão o rumo e a história dele, as faça com sabedoria.\n\n");
 
-        System.out.print("\nPrimeiro capitulo: Onde tudo começou.");
-        System.out.println("\n\nA muito tempo atrás, quando os dragões ainda dominavam o planeta terra, sr. Joãozin, um nobre guerreiro, vivia amargurado em sua vida monotona.");
-        System.out.println("Indignado, pediu aos céus que o ajudassem a mudar sua história. Eis então que você, " + nomejogador + ". Foi designado(a) para esse feito.");
-        System.out.println("Suas escolhas moldarão o futuro deste cavaleiro, então as faça com sabedoria.");
+    System.out.println("Capítulo 1: Onde tudo começou\n");
 
-        System.out.print("\nEm uma bela noite, o céu se mostrava lindamente. Era possivel observar a via lactea e toda sua grandeza a olho nu. \nSr. Joãozin, deitado em uma pedra, começa a refletir sobre sua vida.");
-        System.out.print("\n'Eu deveria ir na grande cidade, me disseram que lá podem haver tesouros magnificos!' Pensou ele.");
-        System.out.print("\n'Se bem que eu havia prometido me encontrar com 3 magos, para poder descobrir algo sobre meu futuro'");
-        System.out.print("\n'É, acho que eu deveria era desistir e ficar onde estou, não tenho mais esperanças.'");
+    System.out.print("  No estabulo, enquanto ajuda seu pai a cuidar dos cavalos, você reflete sobre quais seriam suas opções atuais. Seu pai agora aposentado, foi um grande cavaleiro real na sua época, antes de cair em desgraça com a bebida e ter agora que servir como empregado invisível do rei. Você então poderia fazer diferente, ir para o centro de treinamento descobrir quais seriam seus verdadeiros dons e focar em honrar a memória de seu pai. \n    Por outro lado, pessoas estavam sendo atacadas aparentemente sem explicação em toda região de Storngonz, uma vila não muito próxima do reino, mas grandes recompensas estavam disponíveis para quem conseguisse desvendar o mistério por trás dessas mortes. Você então poderia se aventurar e trazer consigo a resolução, além de ganhar grande fama e prestigio com isso.\n\n");
 
-        System.out.println("\n\nO que Sr. Joãozin deve fazer? \n1 - Ir na cidade; \n2- Encontrar-se com os 3 magos; \n3- Desistir de tudo.\n");
-        int escolha1 = recebedor.nextInt();
+    //Primeira escolha (Capítulo 1.1)
+    System.out.print("Você pode: \n1- Ir para o centro de treinamento; \n2- Se aventurar em Storngonz. \nO que fará agora? ");
+    int escolha1 = recebedor.nextInt();
 
-        if (escolha1 == 1) {
-            System.out.print("\n'Resolvido, irei na grande cidade!' \n\nDepois de caminhar por 5 horas seguidas, Sr. Joãozinho chega em uma linda área verde, com uma diversidade de plantas e animais.");
-            System.out.print("\nEm meio a tanta beleza, ele se depara com uma bela donzela e com vergonha desce seu olhar para o chão, onde avista uma cobra pesçonhenta. \nO que ele deve fazer? ");
-            System.out.print("\n1- Atacar a cobra; \n2- Correr; \n3- Esperar a mordida; \n");
-            int escolha2 = recebedor.nextInt();
+    if(escolha1 == 1) {
+        System.out.print("\n\n    Você resolve seguir para o centro de treinamento. Ao chegar lá, é recebido pelo diretor geral sr. Olivyx, que lhe mostra sua primeira escolha. ''O que você quer ser?'' Pergunta ele enquanto aponta para as três cartas na mesa. Mago, guerreiro e arqueiro. \n  São as imagens que as compõem. Cada classe com seus atributos específicos. Onde dependendo de sua escolha, você pode ter menos ou mais vida, menos ou mais energia e assim por diante, já que essas cartas são mágicas e tem as propriedades necessárias para mudarem tais atributos. Porém não tem como saber exatamente isso de cada um, pois a escolha tem que vir do coração. \n\n");
 
-            if (escolha2 == 1) {
-                System.out.println("\nSr. Joãozin vs cobra. \n");
-                System.out.print("Sr. Joãozin desfere o golpe!");
-                person1.atacar(escolha2);
-                System.out.print("A cobra tem sua cabeça descepada. Ficando com os seguintes atributos: \n");
-                person2.apanhar(escolha2);
-                person2.status();
-                System.out.print("\n\nSr. Joãozinho matou a cobra. Fim.");
-                System.out.print("\nO status atual de Sr. Joãozinho agora é: \n\n");
-                person1.status();
-            } else if (escolha2 == 2) {
-                System.out.print("Sr. Joãozinho resolve correr. Ficando a uma distância segura de 15 passos da cobra.");
-                for (int i = 1; i <= 15; i++){
-                    person1.correr(escolha2);
-                }
-                System.out.print("Cada passo dessa corrida lhe custou -1 de energia. Segue abaixo seu novo status atual. \n");
-                person1.status();
-            } else if (escolha2 == 3) {
-                System.out.print("Sr. Joãozinho resolveu desafiar a cobra. Mas logo em seguida é atacado.");
-                person1.apanhar(escolha2);
-                System.out.print("O status atual de Sr. Joãozinho agora é: ");
-                person1.status();
-            }
+        System.out.print("Você pode: \n1- Se tornar um mago; \n2- Se tornar um guerreiro; \n3- Você pode se tornar um arqueiro. \nO que fará agora? ");
+        int escolha1ponto2 = recebedor.nextInt();
 
-        } else if (escolha1 == 2) {
-            System.out.print("'Resolvido! Irei me encontrar com os 3 magos!'");
-            System.out.print("\nAo chegar, um dos magos sente algo e se prepara para revelar, mas do nada, uma flecha perdida voa em direção ao coração de Sr. Joãozinho, que morre ali mesmo.");
-            System.out.print("\n\nTHE END!\n\n");
-        } else if (escolha1 == 3) {
-            System.out.print("'Sabe de uma coisa? Vou é desistir de tudo.'\n E assim, esperando pelo dia de sua morte, Sr. Joãozinho envelhece pobre, feio e amargurado.");
-            System.out.print("\n\nTHE END!\n\n");
+        //Capítulo 1.1.1
+        if (escolha1ponto2 == 1) {
+            System.out.print("\n\n  '-Ótima escolha!' Disse o diretor, após você declarar que irá se tornar um mago. Lhe encaminhou então para a turma do senhor Legoilles, pois ele era a pessoa adequada para lhe ajudar em sua nova jornada. Você então treinou por um longo tempo. Aprendeu a criar suas próprias magias, a sobreviver na mata densa e a controlar sua respiração, a ponto de conseguir ouvir até mesmo animais a quilômetros de distância. Legoilles então lhe chama para sua sala: \n'-Joãozin, agora você chegou em um momento em que não tenho mais nada a fazer com você, a não ser lhe contar sobre o grande torneio.' \n'-Mas eu já ouvi falar sobre esse torneio. Não sei então para quê passei tanto tempo aqui.' Disse você para ele. \nEle então respondeu: \n'-O que você não sabe é o que realmente acontece lá. Você já se encontrou com alguma turma completa que participou do torneio? Bom, eu acho que não. Não sobrevivem nem 10 dos 100 que entram. Lá você lutará com monstros desconhecidos, caso sobreviva, ganhará um cajado com propriedades mágicas que se aprimorarão junto a você. Boa sorte, sem perguntas.' Você então segue para o torneio, onde é atacado logo nos primeiros 10 min e morre.\n\n");
         }
-
-        recebedor.close();
+        //Capítulo 1.1.2
+        else if (escolha1ponto2 == 2) {
+            System.out.print("\n\n  '-Ótima escolha!' Disse o diretor, após você declarar que irá se tornar um guerreiro. Lhe encaminhou então para a turma do senhor Thronikes, pois ele era a pessoa adequada para lhe ajudar em sua nova jornada. Você então treinou por um longo tempo. Ganhou uma espada e aprendeu a utiliza-la, aprendeu a sobreviver na mata densa e a controlar sua respiração, a ponto de conseguir ouvir até mesmo animais a quilômetros de distância. Thronikes então lhe chama para sua sala: \n'-Joãozin, agora você chegou em um momento em que não tenho mais nada a fazer com você, a não ser lhe contar sobre o grande torneio.' '-Mas eu já ouvi falar sobre esse torneio. Não sei então para quê passei tanto tempo aqui.' Disse você para ele. \n Ele então respondeu: '-O que você não sabe é o que realmente acontece lá. Você já se encontrou com alguma turma completa que participou do torneio? Bom, eu acho que não. Não sobrevivem nem 10 dos 100 que entram. Lá você lutará com monstros desconhecidos, caso sobreviva, ganhará uma espada diferente, com propriedades mágicas que se aprimorarão junto a você. Boa sorte, sem perguntas.” Você então segue para o torneio e passa as primeiras 24 horas vivos. Porém está muito cansado. \nPor sorte não se encontrou ainda com nenhum dos monstros desconhecidos. Resolve parar um pouco e ir se encosta em uma árvore. Acaba cochilando e nisso é rasgado ao meio, numa velocidade tão rápida que você só consegue ter apenas a reação de abrir os olhos. Aqui acaba a jornada de Joãozinho.\n\n");
+        }
+        //Capítulo 1.1.3
+        else if (escolha1ponto2 == 3) {
+            System.out.print("\n\n    '-Ótima escolha!' Disse o diretor, após você declarar que irá se tornar um arqueiro. Lhe encaminhou então para a turma do senhor Argonilet, pois ele era a pessoa adequada para lhe ajudar em sua nova jornada. Você então treinou por um longo tempo. Aprendeu a usar o arco, controlar sua respiração e ter um foco excepcional. Porém em um belo dia na mata, você atinge sem querer a perna de uma moça que atravessou na frente de um alce que já estava na sua mira. Ao se aproximar para ajudá-la, ela viu o arco em sua mão e lhe associou ao ato. Sem que você pudesse ao menos retomar sua guarda, ela lhe apunhalou, pois achou que ela quem fosse o alvo. Assim, você morreu sem nem ao menos conseguir triunfar em sua talvez possível carreira. Fim. \n\n");
+        }
+    } 
+    
+    //Segunda escolha (Capítulo 1.2)
+    else if (escolha1 == 2) {
+        System.out.print("\n\n      Você resolver ir para Storngonz. Chegando lá, avista logo de cara uma casa com sinais de arrombamento. Ao se aproximar mais um pouco, encontra um corpo, ou pelo menos o que sobrou dele, completamente dilacerado. Avista outro mais a frente e novamente vai averiguar. Esse outro está de bruços. Prontamente então você se abaixa para vira-lo. Enquanto faz isso, nota que do lado do corpo tem uma goteira de sangue, mas esse sangue está caindo do teto. \nResolve então olhar pra cima. Você nem terminou de virar para cima direito, pois só conseguiu ver a sombra daquilo que te atacou. \nDeveria ter se atentando a um pequeno detalhe... Como iria lutar contra monstros desconhecidos sem ter nenhum treinamento ou arma especifica? Morre aqui Joãozinho, na sua tentativa de mudar de vida. \n\n");
+    }
+    recebedor.close();
     }
 }
