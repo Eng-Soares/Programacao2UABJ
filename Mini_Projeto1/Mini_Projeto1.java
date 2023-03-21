@@ -6,6 +6,10 @@ public static void main(String[] args) {
 
     Scanner recebedor = new Scanner(System.in);
 
+    Personagem Monstro1 = new Personagem("Monstro", 150, 250, "BF I");
+    Personagem Pai_de_Joãozin = new Personagem("Toim", 200, 300, "Guerreiro V");
+
+
     //Introdução e contexto
     System.out.println("\n\n------------------------------------------------------------------------------------------------------------------A HISTÓRIA DE JOÃOZIN------------------------------------------------------------------------------------------------------------------------------\n\n");
     System.out.print("  A muito tempo atrás, Joãozin se viu em uma situação de agonia em sua vida. Triste e amargurado pela sua rotina monótona, teve um choque de realidade de uma hora para outra. Implorou aos Deuses uma luz que o orientasse, pois deveria mudar sua realidade, ir em busca da felicidade. Ao ouvirem suas preces, eles resolvem ajudar. Designam você para possuir o corpo de Joãozin e se passar por ele por algum tempo. A partir de agora suas decisões mudarão o rumo e a história dele, as faça com sabedoria.\n\n");
@@ -40,9 +44,39 @@ public static void main(String[] args) {
     
     //Segunda escolha (Capítulo 1.2)
     else if (escolha1 == 2) {
-        System.out.print("\n\n      Você resolver ir para Storngonz. Chegando lá, avista logo de cara uma casa com sinais de arrombamento. Ao se aproximar mais um pouco, encontra um corpo, ou pelo menos o que sobrou dele, completamente dilacerado. Avista outro mais a frente e novamente vai averiguar. Esse outro está de bruços. Prontamente então você se abaixa para vira-lo. Enquanto faz isso, nota que do lado do corpo tem uma goteira de sangue, mas esse sangue está caindo do teto. \nResolve então olhar pra cima. Você nem terminou de virar para cima direito, pois só conseguiu ver a sombra daquilo que te atacou. \nDeveria ter se atentando a um pequeno detalhe... Como iria lutar contra monstros desconhecidos sem ter nenhum treinamento ou arma especifica? Morre aqui Joãozinho, na sua tentativa de mudar de vida. \n\n");
+        System.out.print("\n\nVocê resolve ir para Storngonz e vai então ao encontro de seu pai para avisar sobre sua decisão. “\n-Pai, vou me aventurar nas terras de Storngonz! Estou em busca de algum sentido para mim.” \nMas seu pai então, revoltado, lhe questiona “\n-Veja meu estado atual. Não lembras o que aconteceu?”");
+
+        //Capítulo 2: O pai
+        System.out.print("Acontece que uns anos antes, Toim, pai de Joãozin, havia sido designado para ir descobrir o que estava acontecendo no reino vizinho, nas terras de Storngonz. Pois o rei estava em busca de novas alianças e resolveu então enviar seu melhor cavaleiro para lá, visando descobrir o que estaria acontecendo naquelas terras. Prontamente então ele foi. \nHaviam boatos de monstros que cresciam conforme se alimentavam do sofrimento dos humanos. Mas não um sofrimento qualquer, eles dilaceravam os pobres indivíduos. Porém Toim achava que isso só passava de uma baboseira, acreditava se tratar apenas de algum animal feroz. Seguiu então rumo ao leste, durante 5 dias. Em uma de suas paradas para descansar, Toim viu um vulto preto adentrando a mata. Curioso, resolve então ir atrás. Ao se aproximar, tem uma surpresa, o monstro era real! \n“-Não ouse chegar mais perto!” Disse o monstro. \nToim não acreditava no que estava diante dos seus olhos, mas sacou sua espada e desferiu um golpe.");
+
+        System.out.print("\n\n(Status atual de ambos:)\n");
+        Pai_de_Joãozin.status();
+        System.out.print("\n\n");
+        Monstro1.status();
+
+        System.out.print("\n\n");
+        Pai_de_Joãozin.atacar(escolha1);
+
+        System.out.print("\n\n");
+        System.out.print("O monstro então sente o corte");
+        System.out.print("\n\n");
+        Monstro1.apanhar(escolha1);
+        System.out.print("\n\n");
+        System.out.print("Ele então parte para cima de Toim, lhe ataca e foge");
+        System.out.print("\n\n");
+        Pai_de_Joãozin.apanhar(escolha1);
+        System.out.print("\n\n");
+
+        System.out.print("Toim acabou ficando desacordado e foi resgatado por um camponês que passava ali perto. O rei então foi avisado e mandou cavaleiros para lhe trazerem de volta. Quando contou sua história do que havia acontecido, todos fizeram chacota. Perdeu toda sua credibilidade e acabou por entrar na bebida. Fim.");
+
+        System.out.print("(Status após combate:)");
+        System.out.print("\n\n");
+        Pai_de_Joãozin.status();
+        System.out.print("\n\n");
+        Monstro1.status();
+        
     }
-    
+
     recebedor.close();
     }
 }
