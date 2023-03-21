@@ -42,6 +42,7 @@ public static void main(String[] args) {
     else if (escolha1 == 2) {
         System.out.print("\n\n      Você resolver ir para Storngonz. Chegando lá, avista logo de cara uma casa com sinais de arrombamento. Ao se aproximar mais um pouco, encontra um corpo, ou pelo menos o que sobrou dele, completamente dilacerado. Avista outro mais a frente e novamente vai averiguar. Esse outro está de bruços. Prontamente então você se abaixa para vira-lo. Enquanto faz isso, nota que do lado do corpo tem uma goteira de sangue, mas esse sangue está caindo do teto. \nResolve então olhar pra cima. Você nem terminou de virar para cima direito, pois só conseguiu ver a sombra daquilo que te atacou. \nDeveria ter se atentando a um pequeno detalhe... Como iria lutar contra monstros desconhecidos sem ter nenhum treinamento ou arma especifica? Morre aqui Joãozinho, na sua tentativa de mudar de vida. \n\n");
     }
+    
     recebedor.close();
     }
 }
